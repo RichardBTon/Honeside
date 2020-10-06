@@ -1,0 +1,232 @@
+:root {
+  --mainColor: #59253a;
+  --secondaryColor: #78244c;
+  --thirdColor: #895061;
+
+  --mainBlue: #0677a1;
+  --secondBlue: #2d4159;
+
+  --infowidth: 900px;
+}
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+  color: #fff;
+  transition: 0.3s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Russo One", sans-serif;
+  /* color: var(--secondBlue); */
+  color: #fff;
+}
+
+h1 {
+  font-size: 56px;
+}
+h2 {
+}
+h3 {
+}
+h4 {
+}
+h5 {
+}
+h6 {
+}
+
+ul {
+  list-style: none;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.section {
+  background-color: var(--mainColor);
+}
+
+.section:nth-child(odd) {
+  background-color: var(--secondaryColor);
+}
+
+.main-wrapper {
+  width: 70%;
+  margin: auto;
+  position: relative;
+  padding: 50px;
+  /* border: 2px dashed lightblue; */
+}
+
+.main-wrapper h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+  padding: 5px;
+}
+
+.intro-wrapper {
+  height: 700px;
+  width: 100%;
+  background-image: url("img/flowers.jpg");
+  background-size: cover;
+  text-align: center;
+}
+
+.intro {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+#first-tittel {
+  padding-top: 200px;
+}
+
+.btn {
+  background-color: rgb(6, 119, 161);
+  opacity: 0.8;
+  border: none;
+  padding: 5px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#initbtn {
+  margin-top: 60px;
+  padding: 10px;
+  font-size: 3rem;
+
+  -webkit-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+}
+
+.navbar-wrapper {
+  position: fixed;
+  width: 100%;
+  background-color: var(--mainColor);
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.navbar-wrapper .right-nav {
+  margin-right: 30px;
+  display: flex;
+}
+
+.navbar-wrapper button {
+  border: none;
+  height: 100%;
+  background-color: inherit;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 0 12px 5px 12px;
+  color: #fff;
+}
+
+.navbar-wrapper button:hover {
+  background-color: var(--thirdColor);
+  cursor: pointer;
+}
+
+.icon {
+  color: white;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+#info {
+  padding: 50px 0;
+}
+
+.info-shadow {
+  margin: auto;
+  margin-top: 30px;
+  /* position: absolute;
+  top: 100px;
+  left: 300px; */
+  padding-left: 30px;
+  padding-top: 30px;
+  width: var(--infowidth);
+  height: calc(var(--infowidth) * 0.71);
+  background-color: var(--mainBlue);
+  /* border: 1px solid black; */
+}
+
+.info-wrapper {
+  width: var(--infowidth);
+  height: calc(var(--infowidth) * 0.71);
+  padding: 15px;
+  line-height: 2em;
+  background-color: rgba(89, 37, 58, 0.9);
+  /* border: 1px solid lightcoral; */
+  /* position: absolute; */
+  /* top: 100px; */
+  /* text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr; */
+
+  -webkit-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 1);
+}
+
+.høneseleksjon {
+  width: 70%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* border: 2px dashed lightblue; */
+  justify-items: center;
+}
+
+.høne-sec {
+  text-align: center;
+}
+
+.høne-sec h2 {
+  padding: 10px;
+}
+.hønebilde {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  -webkit-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 1);
+}
+
+.hønebilde:hover {
+  width: 270px;
+  height: 180px;
+  cursor: pointer;
+}
+
+#respons {
+  padding: 50px;
+}
