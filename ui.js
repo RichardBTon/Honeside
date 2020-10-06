@@ -1,20 +1,20 @@
-let initbtn = document.getElementById("initbtn");
-let logo = document.getElementById("logo");
-let navbtns = document.getElementsByClassName("navbar-btn");
+let initbtn = document.querySelector("#initbtn");
+let logo = document.querySelector("#logo");
+let navbtns = document.querySelectorAll(".navbar-btn");
 
-const navbar = document.getElementById("navbar");
-const sections = Array.from(document.getElementsByClassName("section"));
+const navbar = document.querySelector("#navbar");
+const sections = document.querySelectorAll(".section");
 
-const respons = document.getElementById("respons");
-const hønebilder = Array.from(document.getElementsByClassName("hønebilde"));
-const hønetitler = Array.from(document.getElementsByClassName("hønetittel"));
+const respons = document.querySelector("#respons");
+const hønebilder = document.querySelectorAll(".hønebilde");
+const hønetitler = document.querySelectorAll(".hønetittel");
 
 window.addEventListener("load", function () {
   // Scrollbuttons
 
   for (var i = 0; i < navbtns.length; i++) {
     if (navbtns.length != sections.length - 1) {
-      console.log("Sjekk antall navbtns i forhold til sections");
+      console.warn("Sjekk antall navbtns i forhold til sections");
     }
     let ypos = -navbar.offsetHeight;
     let someSections = sections.slice(navbtns.length - i);
@@ -42,13 +42,13 @@ function addScrollFunk(btn, ypos) {
 
 function høneRespons(i) {
   return function responsHøne(event) {
-    let andreIndekser = [];
-    for (var k = 0; k < hønebilder.length; k++) {
-      if (k != i) {
-        andreIndekser.push(k);
-      }
-    }
-    respons.innerHTML =
+    let andreIndekser = hønebilder.filter((bilde, k) => k != i);
+    // for (var k = 0; k < hønebilder.length; k++) {
+    //   if (k != i) {
+    //     andreIndekser.push(k);
+    //   }
+    // }
+    respons.innerText =
       hønetitler[andreIndekser[0]].innerHTML +
       " and " +
       hønetitler[andreIndekser[1]].innerHTML +
@@ -69,7 +69,7 @@ for (var i = 0; i < hønebilder.length; i++) {
 
   let høneRespons1 = høneRespons(i);
   // console.log(i);
-  hønebilder[i].addEventListener("click", hei);
+  hønebilder[i].addEventListener("click", høneRespons1);
 
   // hønebilder[i].removeEventListener("click", høneRespons1);
 }
@@ -77,7 +77,7 @@ for (var i = 0; i < hønebilder.length; i++) {
 function removeListeners() {
   // console.log("hei");
   for (var i = 0; i < hønebilder.length; i++) {
-    hønebilder[i].removeEventListener("click", hei);
+    hønebilder[i].removeEventListener("click", høneRespons1);
   }
 }
 

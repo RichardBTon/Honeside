@@ -7,6 +7,8 @@
   --secondBlue: #2d4159;
 
   --infowidth: 900px;
+  --hønewidth: 300px;
+  --høneheight: 200px;
 }
 
 * {
@@ -128,6 +130,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   z-index: 10;
+  /* border-bottom: solid 1px white; */
 }
 
 .navbar-wrapper .right-nav {
@@ -210,20 +213,25 @@ h6 {
 }
 
 .høne-sec h2 {
-  padding: 10px;
+  padding-bottom: 20px;
 }
 .hønebilde {
-  width: 300px;
-  height: 200px;
+  width: 99%;
+  height: 99%;
   object-fit: cover;
   -webkit-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 1);
   -moz-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 1);
   box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 1);
 }
+.hønebilde-div {
+  width: var(--hønewidth);
+  height: var(--høneheight);
+}
 
-.hønebilde:hover {
-  width: 270px;
-  height: 180px;
+.hønebilde-div:hover .hønebilde {
+  width: calc(var(--hønewidth) * 0.9);
+  height: calc(var(--høneheight) * 0.9);
+  padding: 20px 30px 20px 30px;
   cursor: pointer;
 }
 

@@ -22,7 +22,7 @@
   </head>
   <body>
     <div id="navbar" class="navbar-wrapper">
-      <i id="logo" class="fas fa-paw fa-4x icon"></i>
+      <i id="logo" class="fas fa-paw fa-4x icon navbar-btn"></i>
       <ul class="right-nav">
         <li>
           <button type="button" name="button" class="navbar-btn">Info</button>
@@ -30,11 +30,11 @@
         <li>
           <button type="button" name="button" class="navbar-btn">Høner</button>
         </li>
-        <li>
+        <!-- <li>
           <button type="button" name="button" class="navbar-btn">
             Kontakt
           </button>
-        </li>
+        </li> -->
       </ul>
     </div>
     <section id="sec-1" class="section">
@@ -89,40 +89,40 @@
         </div>
       </div>
     </section>
-    <section class="section" style="height: 700px;">
+    <section class="section">
       <div class="main-wrapper">
         <h1>Velg høne</h1>
       </div>
       <div class="høneseleksjon">
         <div class="høne-sec">
           <h2 class="hønetittel">Hans-Magnus</h2>
-          <img
-            class="hønebilde"
-            src="img/Hans-Magnus.jpg"
-            alt="Høne Hans-Magnus"
-          />
+          <div class="hønebilde-div">
+            <img
+              class="hønebilde"
+              src="img/Hans-Magnus.jpg"
+              alt="Høne Hans-Magnus"
+            />
+          </div>
         </div>
         <div class="høne-sec">
           <h2 class="hønetittel">Sivert</h2>
-          <img class="hønebilde" src="img/Sivert.jpg" alt="Høne Sivert" />
+          <div class="hønebilde-div">
+            <img class="hønebilde" src="img/Sivert.jpg" alt="Høne Sivert" />
+          </div>
         </div>
         <div class="høne-sec">
           <h2 class="hønetittel">Ove-Fredrik</h2>
-          <img
-            class="hønebilde"
-            src="img/Ove-Fredrik.jpg"
-            alt="Høne Ove-Frederik"
-          />
+          <div class="hønebilde-div">
+            <img
+              class="hønebilde"
+              src="img/Ove-Fredrik.jpg"
+              alt="Høne Ove-Frederik"
+            />
+          </div>
         </div>
       </div>
       <h2 id="respons"></h2>
     </section>
-    <section class="section" style="height: 700px;">
-      <div class="main-wrapper">
-        <h1>Kontakt</h1>
-      </div>
-    </section>
-
-    <script type="text/javascript" src="ui.js"></script>
+    <script src="hønerespons.js" charset="utf-8"></script>
   </body>
 </html>
